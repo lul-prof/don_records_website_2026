@@ -1,0 +1,33 @@
+.featured-artists-container{
+    background-color: #282828;
+    color: white;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.featured-artists-profile{
+    display: flex;
+    flex-direction: row;
+}
+
+.featured-artists-profile .featured-artist .featured-artist-image{
+    border: 1px solid gainsboro;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-artists-profile .featured-artist .featured-artist-image img{
+    width: 120px;
+    border-radius: 50%;
+}
+
+.featured-artists-profile .featured-artist .featured-artist-detail{
+    padding: 10px;
+}
+
+.featured-artists-profile .featured-artist .featured-artist-detail img{
+    width: 10%;
+}

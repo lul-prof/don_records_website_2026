@@ -1,0 +1,34 @@
+.featured-merchandise-container{
+    background-color: #282828;
+    color: white;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.featured-merchandise{
+    display: flex;
+}
+
+.featured-merchandise .featured-merch .featured-merch-image img{
+    width:100%;
+    height: 300px;
+    padding: 5px;
+    border-radius: 10px;
+}
+#featured-merch-cart{
+    max-width: 20%;
+}
+.featured-merch-details{
+    display: flex;
+    justify-content: space-between;
+    text-align: end;
+    padding: 10px;
+}
+.featured-merch-detail1{
+    width: 100%;
+    text-align: start;
+}
+
+.featured-merch-detail1 h4{
+    margin-bottom: 10px;
+}

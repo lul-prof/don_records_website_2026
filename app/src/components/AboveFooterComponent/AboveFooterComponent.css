@@ -1,0 +1,16 @@
+.above-footer-container{
+    background-color: #282828;
+    color: white;
+    padding: 10px;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+.above-footer-container p{
+    text-align: center;
+}
+.above-footer-container p img{
+    width: 80px;
+
+}

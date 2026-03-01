@@ -1,0 +1,41 @@
+.hero-container{
+    width: 100%;
+    background-color:#28282B;
+}
+.hero-container img{
+    width: 100%;
+    margin-top: 5px;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+
+.hero-container .search-bar{
+    display: none;
+    background-color: black;
+    padding: 10px 10px;
+    border-radius: 20px;
+    max-width: 100%;
+    position: absolute;
+    top: calc(450px);
+    left: 5%;
+}
+.hero-container .search-bar input{
+    width: 500px;
+    margin: 10px 60px;
+    margin-left: 0px;
+    margin-bottom: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: white;
+}
+.hero-container .search-bar button{
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+}
+.hero-container .search-bar button:hover{
+    cursor: pointer;
+}

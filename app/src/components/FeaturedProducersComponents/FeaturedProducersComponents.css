@@ -1,0 +1,33 @@
+.featured-producers-container{
+    background-color: #282828;
+    color: white;
+    padding: 10px;
+    overflow-x: hidden;
+}
+.featured-producers{
+    display: flex;
+}
+
+.featured-producer{
+    padding: 2px;
+}
+
+.featured-producers .featured-producer .featured-producer-image{
+    width: fit-content;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.featured-producers .featured-producer .featured-producer-image img{
+    width: 120px;
+    border-radius: 50%;
+}
+
+.featured-producers .featured-producer .featured-producer-details{
+   padding: 10px;
+   margin-left: 10px;
+}
+
+.featured-producers .featured-producer .featured-producer-details p img{
+    width: 10%;
+}

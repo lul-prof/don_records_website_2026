@@ -1,0 +1,28 @@
+.featured-blogs-container{
+    background-color: #282828;
+    color: white;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.featured-blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.featured-blogs .featured-blog{
+    border: 1px solid gainsboro;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+.featured-blogs .featured-blog .featured-blog-image img{
+    border-radius: 5px;
+    height: 100vh;
+    width: 100%;
+}
+
+.featured-blogs .featured-blog .featured-blog-description{
+   width: 100px; 
+}
