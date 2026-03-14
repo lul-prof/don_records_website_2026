@@ -53,7 +53,9 @@
     margin: 20px 0;
 }
 
-
+.searched-item{
+    margin: 10px 0;
+}
 
 .searched-related .beat-related{
     display: flex;

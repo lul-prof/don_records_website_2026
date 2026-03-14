@@ -2,6 +2,8 @@ import express from 'express'
 import upload from '../middleware/multer.js';
 import { addToCart, artist, beat, blog, clearCart, contact, fetchArtists, fetchBeats, fetchBlogs, fetchMerchandise, fetchProducers, fetchUsers, getCart, loginUser, merchandise, myOrders, placeOrder, producer, registerUser, searchBeat, subscribe, updateCart, updateProfile, user } from '../controllers/userController.js';
 import authUser from '../middleware/auth.js';
+import generateToken from '../middleware/mpesa.js';
+import {handleSTKPush,callbackMpesa} from '../controllers/mpesaController.js';
 
 const userRouter=express.Router();
 
@@ -32,9 +34,8 @@ userRouter.post('/clear',clearCart);
 //Orders
 userRouter.post('/order',placeOrder);
 userRouter.post('/orders',myOrders);
-
-
-
+userRouter.post('/lipa',generateToken,handleSTKPush)
+userRouter.post('/callback-mpesa',callbackMpesa)
 
 
 export default userRouter;

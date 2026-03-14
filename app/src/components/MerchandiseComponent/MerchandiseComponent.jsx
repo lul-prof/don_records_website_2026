@@ -1,24 +1,24 @@
 import React, { useContext } from 'react'
 import './MerchandiseComponent.css'
 import TitleComponent from '../TitleComponent/TitleComponent'
-import { assets, products } from '../../assets/assets'
+import { assets } from '../../assets/assets'
 import { ShopContext } from '../../Context/ShopContext'
 import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 
 const MerchandiseComponent = () => {
-    const {currency,addToCart}=useContext(ShopContext);
+    const {currency,addToCart,merchandise}=useContext(ShopContext);
   return (
     <>
     <div id='featured-merchandise-container' className="featured-merchandise-container">
         <TitleComponent title="Bestseller Merchandise" />
         <div className="featured-merchandise">
             {
-                products.map((product)=>(
-                    product.bestseller ?
+                merchandise.map((product)=>(
+                    product.isFeatured ?
                     <div key={product._id} className="featured-merch">
                         <div className="featured-merch-image">
-                          <Link to={`/merchandise/${product._id}`}><img src={product.images[0]} alt="" /></Link> 
+                          <Link to={`/merchandise/${product._id}`}><img src={product.image[0]} alt="" /></Link> 
                         </div>
                         <div className="featured-merch-details">
                             <div className="featured-merch-detail1">
