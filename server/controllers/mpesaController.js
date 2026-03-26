@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 
 const handleSTKPush = async (req, res) => {
   const { phone, amount } = req.body;
-
+  
   //get timestamp
   const year = dayjs().format("YYYY");
   const month = dayjs().format("MM");
@@ -23,7 +23,7 @@ const handleSTKPush = async (req, res) => {
 
   //NGROK callback URL port 3000
   const callbackURL =
-    "https://ulises-unvexatious-chubbily.ngrok-free.dev/api/calback-mpesa";
+    "https://ulises-unvexatious-chubbily.ngrok-free.dev/api/user/callback-mpesa";
 
   const payload = {
     BusinessShortCode: shortCode,
@@ -38,10 +38,10 @@ const handleSTKPush = async (req, res) => {
     AccountReference: "The Don",
     TransactionDesc: "Payment",
   };
+  
   try {
     const response=await axios.post('https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest',payload,{headers:{Authorization:`Bearer ${req.token}`}})
 
-    console.log(responsen);
     res.status(201).json({
         success:true,
         data:response.data,
@@ -58,12 +58,22 @@ const handleSTKPush = async (req, res) => {
 
 
 const callbackMpesa=async(req, res) => {
+  res.status(200).json({ ResultCode: 0, ResultDesc: 'Accepted' });
   const callbackData = req.body;
+  console.log(callbackData);
+  
+  if(callbackData.ResultCode === 0){
+    console.log("Success");
+       
+  }else{
+    console.log("failed");
+    
+  }
 
-  console.log("here is the callback data!", req.body);
+  console.log("Here is the callback data!", req.body);
   
   res.json({ 
-    status: "success" ,
+    success:true,
     callbackData,
 });
 }
