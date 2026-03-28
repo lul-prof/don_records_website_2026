@@ -1,0 +1,23 @@
+.notifications-container{
+    margin-top: 40px;
+    padding-bottom: 100px;
+}
+
+.notifications-container .notifs-bottom{
+    width: 100%;
+}
+
+.notifications-container  .notifs-bottom .notifs-class{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+}
+
+.notifications-container .notifs-bottom .notifs-class .single-notif{
+    background-color: #C0C0C0;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: auto;
+    opacity: 0.75;
+}

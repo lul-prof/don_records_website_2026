@@ -16,6 +16,8 @@ const SingleArtistPage = () => {
     const fetchArtist = async () => {
     try {
       const response=await axios.post(`${backend_url}/api/user/artist/${username}`);
+      console.log(response);      
+      
       if(response.data.success){
         setArtist(response.data.artist);
       }else{
@@ -44,6 +46,7 @@ const SingleArtistPage = () => {
                 alt=""
               />{" "}
             </h4>
+           
             <div className="single-artist-button">
               <button
                 onClick={() =>

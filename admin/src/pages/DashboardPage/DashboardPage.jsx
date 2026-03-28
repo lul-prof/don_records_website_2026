@@ -93,6 +93,10 @@ const DashboardPage = () => {
     fetchOrders();
     fetchUsers();
   },[users,backend_url])
+
+  const stats={
+    totalRevenue:orders.reduce((sum,order)=>sum+order.amount,0)
+  };
   return (
     <>
     <div className="dashboard">
@@ -105,7 +109,7 @@ const DashboardPage = () => {
             </div>
             <div className="dash-top-left-1">
               <p>Total Revenue</p>
-              <p>kes 200,000</p>
+              <p>{stats.totalRevenue}</p>
             </div>
           </div>
           <div className="dash-top-center">

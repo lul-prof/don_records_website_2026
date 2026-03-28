@@ -1,5 +1,5 @@
 import express from 'express'
-import { addBeat, addBlog, addMerchandise, adminLogin, deleteBeat, deleteBlog, deleteMerchandise, deleteUser, featureUser, fetchOrders, getBeats, getBlogs, getMerchandise, getProduct, updateMerchandise, updateOrderStatus, validateUser } from '../controllers/adminController.js';
+import { addBeat, addBlog, addMerchandise, adminLogin, deleteBeat, deleteBlog, deleteMerchandise, deleteUser, featureUser, fetchNotifications, fetchOrders, getBeats, getBlogs, getMerchandise, getProduct, postNotification, updateMerchandise, updateOrderStatus, validateUser } from '../controllers/adminController.js';
 import upload from '../middleware/multer.js';
 import adminAuth from '../middleware/adminAuth.js';
 import { deleteOrder } from '../controllers/userController.js';
@@ -24,6 +24,8 @@ adminRouter.post('/product/:productId',getProduct);
 adminRouter.get('/beats',getBeats);
 adminRouter.get('/blogs',getBlogs);
 adminRouter.get('/merchandise',getMerchandise);
+adminRouter.post('/notification',postNotification);
+adminRouter.get('/notifications',fetchNotifications);
 
 
 export default adminRouter;

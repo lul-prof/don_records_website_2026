@@ -14,7 +14,7 @@ const FeaturedProducersComponents = () => {
     useEffect(()=>{
         const fetchProducers=async()=>{
             try {
-                const response=await axios.get(`${backend_url}/api/user/producers`);
+                const response=await axios.get(`${backend_url}/api/user/producers`);                
                 if(response.data.success){
                     setProducers(response.data.producers);
                 }else{

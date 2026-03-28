@@ -14,6 +14,7 @@ import RevenuePage from "./pages/RevenuePage/RevenuePage";
 import {ManagementContext} from './Context/ManagementContext.jsx'
 import BlogsPage from "./pages/BlogsPage/BlogsPage.jsx";
 import UserPage from "./pages/UserPage/UserPage.jsx";
+import NotificationsPage from "./pages/NotificationsPage/NotificationsPage.jsx";
 
 const App = () => {
   const {token}=useContext(ManagementContext)
@@ -35,6 +36,7 @@ const App = () => {
       <Route path="/orders" element={<OrdersPage/>}></Route>
       <Route path="/revenue" element={<RevenuePage/>}></Route>
       <Route path="/user/:id" element={<UserPage/>}></Route>
+      <Route path="/notifications" element={<NotificationsPage/>}></Route>
     </Routes>
    
   </BrowserRouter>

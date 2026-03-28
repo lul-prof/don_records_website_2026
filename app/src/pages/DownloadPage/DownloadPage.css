@@ -1,0 +1,33 @@
+.download-container{
+    margin-top: 60px;
+    padding-bottom: 30px;
+}
+
+.download-container .download-class{
+    justify-self: center;
+    
+}
+.download-container .download-class .download-header{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.download-container .download-class .download-audio{
+    justify-self: center;
+    width: 100%;
+    padding: 20px;
+}
+.download-container .download-class .download-audio audio{
+    width: 100%;
+}
+.download-container .download-class .download-image{
+    padding: 20px;
+    border-radius: 10px;
+}
+.download-container .download-class .download-image img{
+    width: 100%;
+    border-radius: 10px;
+}
+.download-container .download-class .download-header h2{
+    color: #000000;
+}

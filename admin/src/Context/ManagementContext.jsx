@@ -10,9 +10,26 @@ const ManagementContextProvider=(props)=>{
     const frontend_url=import.meta.env.VITE_FRONTEND_URL;
     const backend_url=import.meta.env.VITE_BACKEND_URL;
 
-    useEffect(()=>{
-        setToken(localStorage.getItem("token"));
-    },[token])
+  useEffect(() => {
+    const fetchToken = async () => {
+      try {
+        if(!token){
+            const storedToken=localStorage.getItem("token");
+            if(storedToken){
+                setToken(storedToken);
+            }else{
+                console.log("Could not set token");   
+            }
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    
+    
+    fetchToken();
+  }, []);
+
     
 
     const value={

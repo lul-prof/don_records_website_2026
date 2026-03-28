@@ -33,6 +33,7 @@ const NavbarComponent = () => {
             <Link to={'/users'}><li onClick={()=>(document.getElementById('nav-side').style.display='none')}><img id="side-content-img" src={assets.userIcon} alt="" />Users</li></Link>
             <Link to={'/orders'}><li onClick={()=>(document.getElementById('nav-side').style.display='none')}><img id="side-content-img" src={assets.orderIcon} alt="" />Orders</li></Link>
             <Link to={'/revenue'}><li onClick={()=>(document.getElementById('nav-side').style.display='none')}><img id="side-content-img" src={assets.revenueIcon} alt="" />Revenue</li></Link>
+            <Link to={'/notifications'}><li onClick={()=>(document.getElementById('nav-side').style.display='none')}><img id="side-content-img" src={assets.notifs} alt="" />Notifications</li></Link>
           </ul>
           <p><img onClick={()=>(localStorage.removeItem("token"),setToken(""),toast.success('Logout Successful'))} id="side-logout-img" src={assets.logout} alt="" /></p>
         </div>

@@ -29,6 +29,7 @@ import CartPage from './pages/CartPage/CartPage'
 import CheckoutPage from './pages/CheckoutPage/CheckoutPage'
 import OrderPage from './pages/OrderPage/OrderPage'
 import NotificationsPage from './pages/NotificationsPage/NotificationsPage'
+import DownloadPage from './pages/DownloadPage/DownloadPage'
 
 
 let DefaultIcon = L.icon({
@@ -71,6 +72,7 @@ const App = () => {
       <Route path='/checkout' element={<CheckoutPage/>}></Route>
       <Route path='/order' element={<OrderPage/>}></Route>
       <Route path='/notifications' element={<NotificationsPage/>}></Route>
+      <Route path='/download' element={<DownloadPage/>} ></Route>
       
     </Routes>
     <FooterComponent/>

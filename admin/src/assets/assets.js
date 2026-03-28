@@ -27,6 +27,7 @@ import search from './magnifying-glass.png'
 import fileI from './music-file.png'
 import featured from './premium-account.png'
 import feature from './premium-account1.png'
+import notifs from './notifs.png'
 
 export const assets={
     sideIcon,
@@ -55,7 +56,8 @@ export const assets={
     search,
     fileI,
     feature,
-    featured
+    featured,
+    notifs
 }
 
 export const products=[

@@ -61,7 +61,9 @@ const SingleBeatPage = () => {
             <div className="single-beat-left-image">
               <img id="single-beat-left-img" src={beat.thumbnail} alt="" />
               <div className="single-beat-preview">
-                <audio
+                <figure>
+                  <figcaption style={{marginLeft:"10px"}}>Listen to {beat.title}</figcaption>
+                  <audio
                     controls
                     preload="auto"
                     controlsList="nodownload"
@@ -71,6 +73,10 @@ const SingleBeatPage = () => {
                     <source src={beat.audio} type="audio/ogg"/>
                     Your browser does not support the audio element.
                   </audio>
+                  <div className="link">
+                    <Link to={`/download?src=${beat.audio}&title=${beat.title}&image=${beat.thumbnail}`} target="_blank">Click here to play Audio</Link>
+                  </div>
+                </figure>
               </div>
               <div className="single-beat-left-details">
                 <h3>

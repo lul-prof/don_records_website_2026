@@ -7,6 +7,7 @@ import orderModel from '../models/orderModel.js'
 import { response } from 'express';
 import adminRouter from '../routes/adminRoute.js';
 import jwt from 'jsonwebtoken';
+import notificationModel from '../models/notificationsModel.js';
 
 
 
@@ -540,4 +541,53 @@ const getMerchandise=async(req,res)=>{
     }
 }
 
-export {addMerchandise,addBeat,addBlog,adminLogin,deleteMerchandise,updateMerchandise,deleteBeat,deleteBlog,deleteUser,validateUser,fetchOrders,updateOrderStatus,getProduct,getBeats,getBlogs,getMerchandise,featureUser}
+
+const postNotification=async(req,res)=>{
+    try {
+        const {title,description,author}=req.body;
+
+        const new_notification=await new notificationModel({
+            title,
+            description,
+            author
+        });
+
+        const notification=await new_notification.save();
+
+        res.json({
+            success:true,
+            message:"Notification Added Successfully",
+            notification
+        })
+        
+    } catch (error) {
+        res.json({
+            success:false,
+            message:error.message
+        })
+    }
+}
+
+const fetchNotifications=async(req,res)=>{
+    try {
+        const notifications=await notificationModel.find({});
+        if(!notifications){
+            res.json({
+            success:false,
+            message:"Notifications is Empty"
+        })
+        }
+        res.json({
+            success:true,
+            message:"Fetched notifications Successfully",
+            notifications
+        })
+    } catch (error) {
+        res.json({
+            success:false,
+            message:error.message
+        })
+    }
+}
+
+export {addMerchandise,addBeat,addBlog,adminLogin,deleteMerchandise,updateMerchandise,deleteBeat,deleteBlog,deleteUser,validateUser,fetchOrders,updateOrderStatus,getProduct,getBeats,getBlogs,getMerchandise,featureUser,postNotification,fetchNotifications}
